@@ -445,11 +445,6 @@
 		float: left;
 	}
 
-	.lj-icon-box {
-		padding: 0 20px;
-		margin-top: 60px;
-	}
-
 	.lj-icon-box i {
 		width: 40px;
 		display: inline-block;
@@ -460,7 +455,7 @@
 	}
 
 	.lj-icon-box h3 {
-		display: inline-block;
+		/*display: inline-block;*/
 		/*font-family: 'Raleway';*/
 		font-weight: 700;
 		font-size: 0.8em;
@@ -469,8 +464,8 @@
 		letter-spacing: 2px;
 		line-height: 40px;
 		margin: 0;
-		position: absolute;
-		top: 0;
+		/*position: absolute;*/
+		/*top: 0;*/
 	}
 
 	.lj-icon-box p {

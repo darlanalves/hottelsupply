@@ -44,7 +44,8 @@
             <!-- HEADER IMAGE -->
             <div class="row header-branding">
                 <div class="brand">
-                    ...
+                    Compre enxovais para seu negócio pelo melhor preço
+                    <br/>como as grandes redes fazem!
                 </div>
             </div>
             <!-- /HEADER IMAGE -->
@@ -63,20 +64,17 @@
             </div>-->
             <div class="row wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">
                 <div class="col-sm-4 lj-icon-box">
-                    <span><i class="fa fa-bars"></i></span>
+                    <span class="icon-border"><i class="fa fa-bars"></i></span>
                     <h3 class="lj-text-uppercase">O que você precisa?</h3>
-
-                        <ul>
-                            <li>Produtos de alta qualidade?</li>
-                            <li>Variedade de produtos?</li>
-                            <li>Melhores ofertas?</li>
-                            <li>Garantias de compras sem pedido mínimo?</li>
-                        </ul>
-
-                        Nós procuramos ofertas nos mehores
+                    <ul>
+                        <li>Produtos de alta qualidade</li>
+                        <li>Variedade de produtos</li>
+                        <li>Melhores ofertas</li>
+                        <li>Garantias de compras sem pedido mínimo</li>
+                    </ul>
                 </div>
                 <div class="col-sm-4 lj-icon-box">
-                    <span><i class="fa fa-truck"></i></span>
+                    <span class="icon-border"><i class="fa fa-truck"></i></span>
                     <h3 class="lj-text-uppercase">Melhores fornecedores</h3>
                     <ul>
                         <li>Fornecedores homologados</li>
@@ -85,10 +83,9 @@
                     </ul>
                 </div>
                 <div class="col-sm-4 lj-icon-box">
-                    <span><i class="fa fa-moon-o"></i></span>
+                    <span class="icon-border"><i class="fa fa-money"></i></span>
                     <h3 class="lj-text-uppercase">Você compra com melhor preço</h3>
                     <ul>
-                        <li>Compra pelo mesmo preço de grandes redes</li>
                         <li>Acompanhamos seu pedido</li>
                         <li>Redução de custo nas compras</li>
                     </ul>
@@ -101,14 +98,12 @@
             <!-- ABOUT TITLE -->
             <div class="row wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">
                 <div class="col-xs-12 lj-about-title clearfix">
-                    <h2 class="lj-text-uppercase">O que nossos clientes dizem:</h2>
+                    <h2 class="lj-text-uppercase">Depoimentos:</h2>
                     <hr>
                 </div>
             </div>
             <div class="row wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">
-                <div class="col-sm-4 lj-icon-box">
-                    <span class="icon-border"><i class="fa fa-user"></i></span>
-                    <h3 class="lj-text-uppercase">Human</h3>
+                <div class="col-sm-12 lj-icon-box">
                     <p>
                         A plataforma de compra coletiva é uma importante ferramenta para médios e pequenos hotéis pois reduz custos, oferece a melhor negociação, dispõe produtos de qualidade que consequentemente propõe melhor experiência para o cliente e para o hóspede. Essa é uma ferramenta de competitividade para o hoteleiro.
                     </p>
@@ -118,28 +113,39 @@
                     <p>
                         Desejo sucesso e muita prosperidade para o desenvolvimento da plataforma de compra coletiva.
                     </p>
+                    <p class="text-right">
+                        Forte abraço,
+                    </p>
+                    <p class="text-right bold">Samuel Koch
+                        <br/> Diretor presidente ABIH-SC
+                    </p>
                 </div>
             </div>
         </div>
     </div>
     <!-- /ABOUT -->
     <!-- SUBSCRIBE -->
-    <div class="subscribe module wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">
-        <div class="container">
+    <div class="subscribe module wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s" ng-app="app">
+        <div class="container" ng-controller="SubscriptionCtrl as ctrl">
             <div class="row">
-                <!-- SUBSCRIBE TITLE -->
-                <div class="col-sm-12 col-md-6 lj-subscribe-title clearfix">
-                    <h2 class="lj-text-uppercase">Join our newsletter</h2>
-                    <hr>
-                </div>
-                <!-- /SUBSCRIBE TITLE -->
-                <!-- SUBSCRIBE FORM -->
-                <div class="col-sm-12 col-md-6 lj-subscribe-form">
-                    <span>Please enter your email below and we'll let you know once we're up and running.</span>
+                <h2 class="lj-text-uppercase">Comece agora mesmo!</h2>
+                <hr>
+                <div class="lj-subscribe-title clearfix"></div>
+                <div class="col-sm-12 lj-subscribe-form">
+                    <span>Preencha abaixo quais produtos você precisa cotar:</span>
+                    <div class="row" ng-repeat="item in ctrl.order.products">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" ng-model="item.name" />
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" ng-model="item.price" />
+                        </div>
+                    </div>
                     <form id="subscribe">
                         <label for="subscribe-email" class="lj-subscribe-message"></label>
                         <div class="clearfix">
-                            <input type="text" value="" name="subscribe-email" id="subscribe-email" placeholder="Email:">
+                            <input type="text" value="" name="subscribe-email" id="subscribe-email" placeholder="Email:"
+                            ng-model="ctrl.order.email">
                             <input type="submit" value="Submit" name="subscribe-submit">
                         </div>
                     </form>
@@ -148,8 +154,9 @@
             </div>
         </div>
     </div>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="app.js"></script>
     <!-- /SUBSCRIBE -->
-
     <!-- jQuery -->
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/lj-crooked.js"></script>
