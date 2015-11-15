@@ -423,8 +423,7 @@
 	}
 
 	.icons > .container {
-		padding-top: 80px;
-		padding-bottom: 80px;
+		padding-top: 60px;
 	}
 
 	.lj-about-title h2 {
@@ -446,9 +445,8 @@
 	}
 
 	.lj-icon-box i {
-		width: 40px;
+		width: 50px;
 		display: inline-block;
-		text-align: left;
 		color: #95b3b8;
 		font-size: 1.9em;
 		line-height: 40px;
@@ -635,7 +633,6 @@
 
 	.trial {
 		width: 100%;
-		background-color: #bdc1c3;
 		overflow: hidden;
 	}
 

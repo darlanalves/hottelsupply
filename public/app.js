@@ -1,15 +1,29 @@
 (function() {
-	/* globals $,angular */
-	'use strict';
+    /* globals $,angular */
+    'use strict';
     var app = angular.module('app', []);
 
     function SubscriptionCtrl() {
         var order = {};
+        var ctrl = this;
 
-        order.produts = [];
+        order.products = [];
 
         this.order = order;
-        console.log(order);
+        this.newProduct = {};
+
+        this.addMore = function () {
+            var list = order.products;
+            var item = ctrl.newProduct;
+
+            if (item.price && item.name) {
+                order.products.push({
+                    name: item.name,
+                    price: item.price
+                });
+                ctrl.newProduct = {};
+            }
+        };
 
         function onSubmit() {
             var input = $('.lj-contact-message');

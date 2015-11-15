@@ -23,7 +23,7 @@
   height: 48px; }
 
 .how-it-works h3 {
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-align: center; }
 
 .how-it-works .lj-icon-box {
@@ -45,3 +45,27 @@
 
 .bold {
   font-weight: bold; }
+
+.m-auto {
+  margin-left: auto;
+  margin-right: auto; }
+
+.lj-subscribe-form {
+  padding-top: 1em; }
+
+.subscribe .btn-more {
+  padding: 1em;
+  text-align: center; }
+
+.subscribe .form-product {
+  padding-top: 1em;
+  border-bottom: 1px solid #eee; }
+
+.subscribe .form-product-input {
+  margin-top: 3em; }
+  .subscribe .form-product-input label {
+    color: #999; }
+
+.trial {
+  background-color: #fafafa;
+  min-height: 650px; }
