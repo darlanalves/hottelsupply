@@ -1,0 +1,1178 @@
+/*
+	Author: Lumberjacks
+	Template: Crooked (Coming Soon)
+	Version: 1.0
+	URL: http://themeforest.net/user/Lumberjacks/
+*/
+
+
+
+/* TABLE OF CONTENTS
+
+	1. Import section
+	2. Basic styles
+	3. Typography
+	4. Breakpoint for high-res devices
+	5. Menu
+	6. Header
+	7. About Us
+	8. Gallery
+	9. Subscribe
+	10. Trial
+	11. Footer
+		11.a Address
+		11.b Twitter
+		11.c Contact
+	12. Breakpoints
+
+*/
+
+
+
+/* 1. IMPORT SECTION */
+
+	@import url("bootstrap.css");
+	/*@import url("http://fonts.googleapis.com/css?family=Raleway:300,700&subset=latin,latin-ext");*/
+	@import url("font-awesome.min.css");
+	@import url("owl.carousel.css");
+	@import url("featherlight.min.css");
+	@import url("featherlight.gallery.min.css");
+	@import url("lj-color-switcher.css");
+	@import url("animate.css");
+
+
+
+/* 2. BASIC STYLES */
+
+	html, body {
+		height: 100%;
+	}
+
+	body {
+		font: 16px/1.5 Lato, "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+		background-color: #fff;
+		color: #262626;
+		font-weight: 300;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	a {
+		color: #89d460;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+	}
+
+	a:hover {
+		color: #89d460;
+	}
+
+	a, a:hover, a:active, a:focus {
+		outline: 0;
+		border: 0;
+		text-decoration: none;
+	}
+
+	.lj-float-left {
+		float: left;
+	}
+
+	.lj-float-right {
+		float: right;
+	}
+
+	.lj-block-center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.lj-show {
+		display: block !important;
+	}
+
+	.lj-hide {
+		display: none !important;
+		visibility: hidden !important;
+	}
+
+	.lj-preloader {
+		background: #d6d9db url('../img/preloader.svg') no-repeat center center;
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 99999;
+	}
+
+
+
+/* 3. TYPOGRAPHY */
+
+	p {
+		line-height: 1.5;
+	}
+
+	.lj-text-uppercase {
+		text-transform: uppercase;
+	}
+
+	.lj-text-center {
+		text-align: center;
+	}
+
+	.lj-text-left {
+		text-align: left;
+	}
+
+	.lj-text-right {
+		text-align: right;
+	}
+
+	.lj-text-justify {
+		text-align: justify;
+	}
+
+	.lj-text-underline {
+		text-decoration: underline;
+	}
+
+
+
+/* 4. BREAKPOINT FOR HIGH-RES DEVICES */
+
+	@media
+	  only screen and (-webkit-min-device-pixel-ratio: 2),
+	  only screen and (   min--moz-device-pixel-ratio: 2),
+	  only screen and (     -o-min-device-pixel-ratio: 2/1),
+	  only screen and (        min-device-pixel-ratio: 2),
+	  only screen and (                min-resolution: 192dpi),
+	  only screen and (                min-resolution: 2dppx) {
+
+	  	.lj-logo-1x,
+	  	.lj-img-1x,
+	  	.lj-footer-img-1x {
+			display: none !important;
+		}
+
+		.lj-logo-2x,
+		.lj-img-2x,
+		.lj-footer-img-2x {
+			display: block !important;
+		}
+
+	}
+
+
+
+/* 5. MENU */
+
+	nav {
+		width: 100%;
+		height: 70px;
+		overflow: hidden;
+		background-color: #fff !important;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+	}
+
+	.lj-logo a,
+	.lj-logo img {
+		height: 40px;
+		/*width: 70px;*/
+	}
+
+	.lj-logo a {
+		display: block;
+	}
+
+	.lj-logo-1x {
+		display: block;
+	}
+
+	.lj-logo-2x {
+		display: none;
+	}
+
+	.lj-menu-icons {
+		display: block;
+		text-align: right;
+		height: 40px;
+	}
+
+	.lj-socials {
+		list-style-type: none;
+		margin: 0;
+		display: inline-block;
+		float: right;
+		line-height: 40px;
+	}
+
+	.lj-socials li {
+		display: inline-block;
+		margin-right: 5px;
+	}
+
+	.lj-socials li a {
+		width: 30px;
+		height: 40px;
+		display: inline-block;
+		line-height: 30px;
+		text-align: center;
+		color: #181818;
+		font-size: 1.1em;
+	}
+
+	.lj-socials li a:hover {
+		color: #95b3b8;
+	}
+
+	.mobile .yt-controls,
+	.tablet .yt-controls {
+		display: none;
+	}
+
+	.yt-controls {
+		display: inline-block;
+		width: 100%;
+		padding-right: 25px;
+		text-align: right;
+	}
+
+	.yt-controls a {
+		display: inline-block;
+		color: #fff;
+		width: 20px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		font-size: 1.1em;
+	}
+
+	.yt-controls a:hover {
+		color: #95b3b8;
+	}
+
+	.lj-menu {
+		display: inline-block;
+	}
+
+	.lj-menu a {
+		display: inline-block;
+		color: #181818;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		font-size: 1.1em;
+		margin-left: 25px;
+	}
+
+	.lj-menu a:hover {
+		color: #95b3b8;
+	}
+
+/* 6. HEADER */
+
+	header {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		background-color: #000 !important;
+	}
+
+	header > .container {
+		height: 100%;
+		position: relative;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.lj-overlay {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.lj-background-repeat {
+	    background-repeat: repeat;
+	}
+
+	.lj-background-no-repeat {
+		background-repeat: no-repeat;
+	}
+
+	.lj-overlay-none {
+		display: none;
+		visibility: hidden;
+	}
+
+	.lj-overlay-image {
+		background-image: url('../img/image-overlay.png');
+		background-repeat: repeat;
+	}
+
+	.lj-overlay-color {
+	    background-color: rgba(0,0,0,0.3);
+	}
+
+	.lj-overlay-gradient {
+		background: -moz-linear-gradient(320deg,  rgba(103, 225, 255, 0.7) 0%, rgba(255, 255, 255, 0.85) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, right bottom, left top, color-stop(0%,rgba(103, 225, 255, 0.7)), color-stop(100%,rgba(255, 255, 255, 0.85))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(320deg,  rgba(103, 225, 255, 0.7) 0%,rgba(255, 255, 255, 0.85) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(320deg,  rgba(103, 225, 255, 0.7) 0%,rgba(255, 255, 255, 0.85) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(320deg,  rgba(103, 225, 255, 0.7) 0%,rgba(255, 255, 255, 0.85) 100%); /* IE10+ */
+		background: linear-gradient(320deg, rgba(103, 225, 255, 0.7) 0%,rgba(255, 255, 255, 0.85) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ccff', endColorstr='#c4ff00',GradientType=1 ) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/1x1.png'); /* IE6-9 fallback on horizontal gradient */
+		pointer-events:none;
+	}
+
+	header.yt-background {
+		background-image: url('http://the-lumberjacks.com/items/coming-soon/crooked/demos/demo-1/img/video.jpg');
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.mobile .mbYTP_wrapper,
+	.tablet .mbYTP_wrapper {
+		z-index: -1 !important;
+	}
+
+	.lj-img-1x,
+	.lj-img-2x {
+		width: 500px;
+		max-width: 85%;
+	}
+
+	.lj-img-1x {
+		display: block;
+	}
+	.lj-img-2x {
+		display: none;
+	}
+
+    .lj-insignia {
+		opacity: 0;
+	}
+
+    .lj-countdown {
+    	color: #fff;
+    	margin-top: 80px;
+    	text-align: center;
+    	opacity: 0;
+    }
+
+    .lj-countdown > * {
+    	text-align: center;
+    }
+
+    .lj-countdown div {
+    	display: inline-block;
+    }
+
+    .lj-countdown div span {
+    	width: 150px;
+    	display: block;
+    }
+
+    .lj-countdown div span:first-child {
+    	height: 64px;
+    	/*font-family: 'Raleway';*/
+    	font-weight: 300;
+    	font-size: 3em;
+    	line-height: 64px;
+    	letter-spacing: 3px;
+    }
+
+    .lj-countdown div span:last-child {
+    	height: 20px;
+    	/*font-family: 'Raleway';*/
+    	font-weight: 300;
+    	font-size: 1.3em;
+    	line-height: 20px;
+    	font-variant: small-caps;
+    	margin-top: 15px;
+    	letter-spacing: 3px;
+    }
+
+
+
+/* 7. ABOUT US */
+
+	.icons {
+		background-color: #fff;
+		overflow: hidden;
+	}
+
+	.icons > .container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.lj-about-title h2 {
+		text-align: left;
+		letter-spacing: 5px;
+		font-size: 1.3em;
+		margin-bottom: 10px;
+		color: #181818;
+	}
+
+	.lj-about-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #181818;
+		margin: 0;
+		display: block;
+		float: left;
+	}
+
+	.lj-icon-box {
+		padding: 0 20px;
+		margin-top: 60px;
+	}
+
+	.lj-icon-box i {
+		width: 40px;
+		display: inline-block;
+		text-align: left;
+		color: #95b3b8;
+		font-size: 1.9em;
+		line-height: 40px;
+	}
+
+	.lj-icon-box h3 {
+		display: inline-block;
+		/*font-family: 'Raleway';*/
+		font-weight: 700;
+		font-size: 0.8em;
+		word-wrap: break-word;
+		color: #181818;
+		letter-spacing: 2px;
+		line-height: 40px;
+		margin: 0;
+		position: absolute;
+		top: 0;
+	}
+
+	.lj-icon-box p {
+		/*font-family: 'Georgia';*/
+		font-size: 1em;
+		font-style: italic;
+		color: #565656;
+		margin-left: 40px;
+	}
+
+
+
+/* 8. GALLERY */
+
+	.owl-carousel {
+		background-color: #fff;
+		padding: 5px 0 5px 0;
+	}
+
+	.owl-item:hover {
+		cursor: pointer;
+	}
+
+
+	.owl-item a {
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		position: absolute;
+		top: 0;
+		color: #fff;
+		background-color: rgba(189,193,195,0.5);
+		font-weight: 700;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+	}
+
+	.owl-item a:hover {
+		color: #fff;
+		background-color: transparent;
+	}
+
+/* 9. SUBSCRIBE */
+
+	.subscribe {
+		width: 100%;
+		background-color: #fff;
+		overflow: hidden;
+	}
+
+	.subscribe > .container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.lj-subscribe-title h2 {
+		text-align: left;
+		letter-spacing: 5px;
+		font-size: 1.3em;
+		margin-top: 0;
+		color: #181818;
+	}
+
+	.lj-subscribe-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #181818;
+		margin: 0;
+		display: block;
+		float: left;
+		margin-bottom: 50px;
+	}
+
+    .lj-subscribe-form {
+    	margin-top: 0;
+    }
+
+    .lj-subscribe-form span {
+    	color: #565656;
+    	font-family: 'Georgia';
+    	font-style: italic;
+    	font-size: 1em;
+    }
+
+    .lj-subscribe-form input[type=text] {
+    	width: 100%;
+    	height: 40px;
+    	display: block;
+    	padding: 10px 0;
+    	border-top: 0;
+    	border-left: 0;
+    	border-right: 0;
+        border-bottom: 1px solid #181818;
+		line-height: 20px;
+		font-size: 1em;
+		font-family: 'Georgia';
+		font-style: italic;
+		background-color: transparent;
+		color: #181818;
+		float: left;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+    }
+
+    .lj-subscribe-form input[type=text]:focus {
+    	outline: 0;
+    	border-bottom: 1px solid #bdc1c3;
+    }
+
+    .lj-subscribe-form input[type=submit] {
+    	height: 40px;
+    	padding: 0;
+    	border: 0;
+		background-color: transparent;
+        color: #181818;
+		font-family: 'Georgia';
+		font-size: 1em;
+		text-align: right;
+		font-style: italic;
+		font-weight: 700;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+		float: right;
+		outline: none;
+    }
+
+    .lj-subscribe-form input[type=submit]:hover {
+    	background-color: transparent;
+    	color: #bdc1c3;
+    }
+
+    .lj-subscribe-message {
+		display: block;
+    	height: 80px;
+    	padding: 20px 0;
+    	color: #565656;
+    	font-size: 1em;
+    	font-family: 'Georgia';
+    	font-style: italic;
+    }
+
+    .lj-subscribe-message i {
+    	margin-right: 5px;
+    }
+
+	.lj-subscribe-message .fa-warning {
+    	color: #ff5c5c;
+    }
+
+    .lj-subscribe-message .fa-check {
+    	color: #89d460;
+    }
+
+
+
+/* 10. TRIAL */
+
+	.trial {
+		width: 100%;
+		background-color: #bdc1c3;
+		overflow: hidden;
+	}
+
+	.trial > .container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.lj-trial-title h2 {
+		text-align: left;
+		letter-spacing: 5px;
+		font-size: 1.3em;
+		margin-top: 0;
+		color: #181818;
+	}
+
+	.lj-trial-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #181818;
+		margin: 0;
+		display: block;
+		float: left;
+		margin-bottom: 50px;
+	}
+
+	.lj-trial-paragraph {
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1em;
+		color: #565656;
+	}
+
+	.lj-trial-button {
+		background: transparent;
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1.2em;
+		font-weight: 300;
+		padding: 10px 30px;
+		display: inline-block;
+		margin-top: 40px;
+		z-index: 1;
+		position: relative;
+		border: 2px solid #181818;
+		color: #181818;
+		overflow: hidden;
+	}
+
+	.lj-trial-button:hover {
+		border: 2px solid #303439;
+		background-color: #303439;
+		color: #bdc1c3;
+	}
+
+/* 11. FOOTER */
+
+	/* 11.a ADDRESS */
+
+	footer {
+		width: 100%;
+		background-color: #303439;
+		overflow: hidden;
+	}
+
+	footer > .container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		color: #fff;
+	}
+
+	.lj-footer-img-1x,
+	.lj-footer-img-2x {
+		width: 200px;
+		max-width: 100%;
+	}
+
+	.lj-footer-img-1x {
+		display: block;
+	}
+
+	.lj-footer-img-2x {
+		display: none;
+	}
+
+	address {
+		margin-top: 40px;
+	}
+
+	address div {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	address div:last-child {
+		margin-bottom: 0;
+	}
+
+	address i {
+		font-size: 1.3em;
+		margin-top: 3px;
+		color: #fff;
+		width: 40px;
+		vertical-align: top;
+	}
+
+	address span {
+		display: inline-block;
+		vertical-align: top;
+		line-height: 26px;
+		font-size: 1em;
+		font-family: 'Georgia';
+		font-style: italic;
+		color: #fff;
+		min-width: 150px;
+	}
+
+	/* 11.b TWITTER */
+
+	.lj-twitter-title h2 {
+		text-align: left;
+		letter-spacing: 5px;
+		font-size: 1.3em;
+		margin-top: 0;
+		color: #fff;
+	}
+
+	.lj-twitter-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #fff;
+		margin: 0;
+		display: block;
+		float: left;
+		margin-bottom: 50px;
+	}
+
+	.lj-twitter-feed {
+		min-height: 70px;
+		width: 100%;
+		font-size: 1em;
+		text-align: left;
+		padding: 0;
+		font-family: 'Georgia';
+		font-style: italic;
+		line-height: 22px;
+	}
+
+	.lj-twitter-feed i {
+		width: 40px;
+		font-size: 2em;
+		color: #fff;
+	}
+
+	.lj-twitter-feed p {
+		margin-left: 40px;
+	}
+
+	.lj-twitter-feed p > a {
+		color: #95b3b8;
+	}
+
+	.lj-twitter-feed p > a:hover {
+		color: #fff;
+	}
+
+	.lj-twitter-feed a {
+		color: #fff;
+	}
+
+	.lj-twitter-feed a:hover {
+		color: #95b3b8;
+	}
+
+	.lj-twitter-feed ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.lj-twitter-feed li {
+		margin-bottom: 30px;
+	}
+
+	.lj-twitter-meta {
+		font-style: normal;
+		/*font-family: 'Raleway';*/
+		font-size: 0.8em;
+		margin-bottom: 10px;
+		letter-spacing: 2px;
+		vertical-align: top;
+	}
+
+	.lj-twitter-meta a {
+		color: #fff;
+		vertical-align: top;
+	}
+
+	.lj-twitter-meta a:hover {
+		color: #bdc1c3;
+	}
+
+	.lj-twitter-meta span {
+		font-weight: 700;
+		vertical-align: top;
+	}
+
+	/* 11.c CONTACT */
+
+	.lj-contact-title h2 {
+		text-align: left;
+		letter-spacing: 5px;
+		font-size: 1.3em;
+		margin-top: 0;
+		color: #fff;
+	}
+
+	.lj-contact-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #fff;
+		margin: 0;
+		display: block;
+		float: left;
+		margin-bottom: 50px;
+	}
+
+	.lj-contact-paragraph {
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1em;
+		color: #fff;
+	}
+
+	.lj-contact-paragraph p {
+		margin-top: 0;
+	}
+
+	.lj-contact-message {
+		height: 1.5em;
+		line-height: 1.5em;
+		padding: 20px 0;
+		color: #fff;
+		font-size: 1em;
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1em;
+	}
+
+	.lj-contact-message i {
+		margin-right: 5px;
+	}
+
+	.lj-contact-message .fa-warning {
+    	color: #ff5c5c;
+    }
+
+    .lj-contact-message .fa-check {
+    	color: #89d460;
+    }
+
+    .lj-footer-right form input[type=text]:focus,
+    .lj-footer-right textarea:focus {
+    	outline: 0;
+    	border-bottom: 1px solid #95b3b8;
+    }
+
+	.lj-footer-right input[type=text] {
+    	width: 100%;
+    	height: 40px;
+    	display: inline-block;
+    	padding: 0 0 10 0px;
+    	background-color: transparent;
+    	border: 0;
+    	border-bottom: 1px #fff solid;
+		line-height: 26px;
+		color: #fff;
+		margin-top: 20px;
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1em;
+	}
+
+	.lj-footer-right textarea {
+		width: 100%;
+    	height: 120px;
+    	display: inline-block;
+    	padding: 0 0 10px 0;
+    	background-color: transparent;
+    	border: 0;
+    	border-bottom: 1px solid #fff;
+		color: #fff;
+		margin-top: 20px;
+		resize: vertical;
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1em;
+	}
+
+    .lj-footer-right input[type=submit] {
+    	width: auto;
+    	height: 30px;
+    	display: inline-block;
+    	padding: 0;
+        color: #fff;
+		font-family: 'Georgia';
+		font-weight: 700;
+		font-style: italic;
+		font-size: 1em;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+		margin-top: 20px;
+		background-color: transparent;
+		border: 0;
+		float: right;
+		outline: none;
+    }
+
+    .lj-footer-right input[type=submit]:hover {
+    	background-color: transparent;
+    	color: #95b3b8;
+    }
+
+
+
+/* 12. BREAKPOINTS */
+
+	@media (min-width: 992px) and (max-width: 1199px) {
+
+
+	}
+
+	@media (min-width: 768px) and (max-width: 991px) {
+
+	    .lj-icon-box p,
+	    .lj-subscribe-form span,
+	    .lj-trial-paragraph,
+	    address span,
+	    .lj-twitter-feed p,
+	    .lj-contact-paragraph,
+	    .lj-contact-message,
+	    #contactform {
+	    	font-size: 0.8em;
+	    }
+
+		/* 7. SUBSCRIBE */
+
+	    .lj-subscribe-form {
+	    	margin-top: 20px;
+	    }
+
+	    /* 11. FOOTER */
+
+	    .lj-twitter-meta {
+	    	font-size: 0.6em;
+	    }
+
+	}
+
+	@media (max-width: 767px) {
+
+		/* 5. MENU */
+
+		.yt-controls {
+			display: none;
+		}
+
+		.lj-menu {
+			font-size: 1.3em;
+		}
+
+		/* 6. HEADER */
+
+		header,
+		header > .container {
+			height: auto;
+		}
+
+		.wrapper {
+			width: 100%;
+			position: static;
+
+			margin-top: 50px !important;
+			margin-bottom: 50px;
+		}
+
+		/* 7. ICONS */
+
+		.lj-about-title h2 {
+			text-align: center;
+		}
+
+		.lj-about-title hr {
+			float: none;
+			margin: 0 auto;
+		}
+
+		.lj-icon-box {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.lj-icon-box:last-child {
+			margin-bottom: 0;
+		}
+
+		.lj-icon-box i {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			font-size: 3em;
+			text-align: center;
+		}
+
+		.lj-icon-box h3 {
+			position: relative;
+		}
+
+		.lj-icon-box p {
+			font-size: 0.8em;
+			margin: 0 auto;
+			padding: 0 10%;
+		}
+
+		/* 9. SUBSCRIBE */
+
+		.lj-subscribe-title h2 {
+			text-align: center;
+		}
+
+		.lj-subscribe-title hr {
+			float: none;
+			margin: 0 auto;
+		}
+
+	    .lj-subscribe-form {
+	    	margin-top: 20px;
+	    	text-align: center;
+	    }
+
+	    .lj-subscribe-form span {
+	    	font-size: 0.8em;
+	    }
+
+		/* 10. TRIAL */
+
+		.lj-trial-title h2 {
+			text-align: center;
+		}
+
+		.lj-trial-title hr {
+			float: none;
+			margin: 0 auto;
+		}
+
+		.lj-trial-paragraph {
+			margin-top: 20px;
+			font-size: 0.8em;
+		}
+
+		.lj-trial-paragraph p {
+			text-align: center;
+		}
+
+		/* 11. FOOTER */
+
+		.lj-footer-left,
+		.lj-footer-center {
+			margin-bottom: 60px;
+		}
+
+		.lj-footer-left,
+		.lj-footer-center,
+		.lj-footer-right {
+			text-align: center;
+		}
+
+		.lj-footer-center h2,
+		.lj-footer-right h2 {
+			text-align: center;
+		}
+
+		.lj-footer-center hr,
+		.lj-footer-right hr {
+			float: none;
+			margin: 0 auto;
+		}
+
+		.lj-footer-img-1x,
+		.lj-footer-img-2x {
+			margin: 0 auto;
+		}
+
+		address i,
+		address span {
+			display: block;
+		}
+
+		.lj-twitter-meta {
+			text-align: center;
+		}
+
+		.lj-twitter-feed p {
+			text-align: center;
+			margin-left: 0;
+		}
+
+		address span,
+		.lj-twitter-feed,
+		.lj-contact-paragraph,
+	    .lj-contact-message,
+	    #contactform
+		 {
+			margin-top: 20px;
+			font-size: 0.8em;
+		}
+
+		.lj-contact-message {
+			margin-top: 40px;
+			height: 1.5em;
+			line-height: 1.5em;
+			padding: 0;
+			text-align: center;
+		}
+
+	}
